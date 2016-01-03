@@ -22,3 +22,15 @@ function pirate() {
         });
 	}
 }
+function cowsay() {
+	var args = $("#translate").val();
+	if (args == 0) {
+		$("#cow").html("What cow should say?");
+	}
+	else {
+		$.get('http://cowsay.morecode.org/say?message=' + encodeURI(args) + '&format=text').success(function (data) {
+			var translated = new DOMParser().parseFromString(data, 'text/html').querySelector("body").textContent;
+            $("#cow").html(translated);
+        });
+	}
+}

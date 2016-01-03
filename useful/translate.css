@@ -1,0 +1,14 @@
+textarea {
+	border: 1px solid black;
+}
+button {
+	font-size: 20px;
+	font-weight: bold;
+	border: 2px solid black;
+	width: 100%;
+	cursor: pointer;
+	background-color: white;
+}
+button:hover {
+	background-color: #ccc;
+}
