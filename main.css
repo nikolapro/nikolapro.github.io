@@ -1,0 +1,67 @@
+body {
+	font-family: helvetica;
+}
+header {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 180px;
+	border-bottom: 5px solid #ccc;
+}
+header .title {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	font-size: 70px;
+	color: #333;
+}
+.menu {
+	position: absolute;
+	bottom: 0px;
+	left: 10px;
+}
+.menu ul {
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 5px;
+}
+.menu ul li {
+	font-size: 20px;
+	margin-right: 25px;
+	display: inline;
+	color: #333;
+	cursor: pointer;
+	text-decoration: none;
+	padding-bottom: 5px;
+}
+.menu ul a {
+	text-decoration: none;
+}
+.menu ul li:hover {
+	color: #FF4E00;
+	border-bottom: 1px solid #FF4E00;
+}
+.container {
+	position: absolute;
+	top: 220px;
+	left: 35px;
+	right: 35px;
+}
+.container #title {
+	font-size: 30px;
+	font-weight: bold;
+	color: #333;
+}
+.container #description {
+	font-size: 20px;
+	color: #333;
+}
+@media (max-width: 600px) {
+	header .title {
+		font-size: 50px;
+	}
+	.menu ul li {
+		margin-right: 20px;
+		font-size: 15px;
+	}
+}
