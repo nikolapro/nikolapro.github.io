@@ -13,7 +13,7 @@ function lolcat() {
 function pirate() {
 	var args = $("#translate").val();
 	if (args == 0) {
-		$("#translated").html("U DOAN WANTS 2 TRANZLATE ANYTHIN???");
+		$("#translated").html("Don't want to translate anything???");
 	}
 	else {
 		$.get('http://allow-any-origin.appspot.com/http://isithackday.com/arrpi.php?text=' + encodeURI(args)).success(function (data) {
