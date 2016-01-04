@@ -38,8 +38,8 @@ header .title {
 	text-decoration: none;
 }
 .menu ul li:hover {
-	color: #FF4E00;
-	border-bottom: 1px solid #FF4E00;
+	color: red;
+	border-bottom: 2px solid red;
 }
 .container {
 	position: absolute;
@@ -55,6 +55,10 @@ header .title {
 .container #description {
 	font-size: 20px;
 	color: #333;
+}
+.menu #active {
+	color: red;
+	border-bottom: 2px solid red;
 }
 @media (max-width: 600px) {
 	header .title {
