@@ -1,49 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>cowsay</title>
-	<link rel="stylesheet" href="translate.css">
-	<script src="translate.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<style>
-	body {
-		font-family: helvetica;
-		color: lime;
-		background-color: black;
-	}
-	hr {
-		color: lime;
-		background-color: lime;
-		border: 1px solid lime;
-	}
-	textarea {
-		border: 1px solid lime;
-		background-color: black;
-		color: lime;
-	}
-	button {
-		color: lime;
-		background-color: black;
-		border: 1px solid lime;
-	}
-	button:hover {
-		color: black;
-		background-color: lime;
-	}
-	</style>
+    <meta charset="UTF-8">
+    <title>Cowsay</title>
+    <link rel="stylesheet" href="translate.css">
+    <script src="translate.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <style>
+        body {
+            font-family: helvetica;
+            color: lime;
+            background-color: black;
+        }
+
+        hr {
+            color: lime;
+            background-color: lime;
+            border: 1px solid lime;
+        }
+
+        textarea {
+            border: 1px solid lime;
+            background-color: black;
+            color: lime;
+        }
+
+        button {
+            color: lime;
+            background-color: black;
+            border: 1px solid lime;
+        }
+
+        button:hover {
+            color: black;
+            background-color: lime;
+        }
+    </style>
+    <script>
+        function getQueryString(name) {
+            name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+            var regex = new RegExp("[\\?&#]" + name + "=([^&#]*)"), results = regex
+                    .exec(location.search);
+            return results === null ? null : decodeURIComponent(results[1].replace(
+                    /\+/g, " "));
+        }
+
+        $(function () {
+            $('#cowsay-button').click(function () {
+                cowsay();
+            });
+            if (!!getQueryString('text')) {
+                $('#translate').val(decodeURIComponent(getQueryString('text')));
+                cowsay();
+            }
+        });
+    </script>
 </head>
 <body>
-	<h1>COWSAY</h1>
-	<textarea id="translate" style="width: 100%; resize: none;" placeholder="What cow should say?"></textarea>
-	<br>
-	<center><button onclick="cowsay()">Create a cow</button></center>
-	<br>
-	<br>
-	<b>
+<h1>COWSAY</h1>
+<textarea id="translate" style="width: 100%; resize: none;" placeholder="What cow should say?"></textarea>
+<br>
+<button id="cowsay-button">Create a cow</button>
+<br>
+<br>
+<b>
 	<pre id="cow" style="font-size: 20px;">
 		
 	</pre>
-    </b>
+</b>
 </body>
 </html>
