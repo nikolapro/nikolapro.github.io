@@ -1,5 +1,7 @@
 textarea {
 	border: 1px solid black;
+	height: 100px;
+	font-size: 20px;
 }
 button {
 	font-size: 20px;
