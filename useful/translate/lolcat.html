@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>lolcat translator</title>
-	<link rel="stylesheet" href="translate.css">
-	<script src="translate.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<style>
-	body {
-		font-family: helvetica;
-		background-image: url(http://cdn1.theodysseyonline.com/files/2015/11/29/635844198531727087654293112_cat_1-jpg.jpg);
-	}
-	h1 {
-		color: white;
-	}
-	</style>
+    <meta charset="UTF-8">
+    <title>lolcat translator</title>
+    <link rel="stylesheet" href="translate.css">
+    <script src="translate.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="/UseHTTPS.js"></script>
+    <style>
+        body {
+            font-family: helvetica;
+            background-image: url(http://cdn1.theodysseyonline.com/files/2015/11/29/635844198531727087654293112_cat_1-jpg.jpg);
+        }
+
+        h1 {
+            color: white;
+        }
+    </style>
 </head>
 <body>
-	<h1>LOLCAT TRANSLATOR</h1>
-	<textarea id="translate" style="width: 100%; resize: none;" placeholder="Your text here..."></textarea>
-	<br>
-	<center><button onclick="lolcat()">Translate</button></center>
-	<textarea id="translated" style="width: 100%; resize: none;" readonly></textarea>
+<h1>LOLCAT TRANSLATOR</h1>
+<textarea id="translate" style="width: 100%; resize: none;" placeholder="Your text here..."></textarea>
+<br>
+<center>
+    <button onclick="lolcat()">Translate</button>
+</center>
+<textarea id="translated" style="width: 100%; resize: none;" readonly></textarea>
 </body>
 </html>

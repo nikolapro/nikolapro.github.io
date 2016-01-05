@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>pirate translator</title>
-	<link rel="stylesheet" href="translate.css">
-	<script src="translate.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<style>
-	body {
-		font-family: helvetica;
-		background-image: url(http://img1.mxstatic.com/wallpapers/031387b44a9f8b852bda3e81903967ab_large.jpeg);
-	}
-	h1 {
-		color: white;
-	}
-	</style>
+    <meta charset="UTF-8">
+    <title>pirate translator</title>
+    <link rel="stylesheet" href="translate.css">
+    <script src="translate.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="/UseHTTPS.js"></script>
+    <style>
+        body {
+            font-family: helvetica;
+            background-image: url(http://img1.mxstatic.com/wallpapers/031387b44a9f8b852bda3e81903967ab_large.jpeg);
+        }
+
+        h1 {
+            color: white;
+        }
+    </style>
 </head>
 <body>
-	<h1>PIRATE TRANSLATOR</h1>
-	<textarea id="translate" style="width: 100%; resize: none;" placeholder="Your text here..."></textarea>
-	<br>
-	<center><button onclick="pirate()">Translate</button></center>
-	<textarea id="translated" style="width: 100%; resize: none;" readonly></textarea>
+<h1>PIRATE TRANSLATOR</h1>
+<textarea id="translate" style="width: 100%; resize: none;" placeholder="Your text here..."></textarea>
+<br>
+<center>
+    <button onclick="pirate()">Translate</button>
+</center>
+<textarea id="translated" style="width: 100%; resize: none;" readonly></textarea>
 </body>
 </html>
