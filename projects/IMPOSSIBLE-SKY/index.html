@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>IMPOSSIBLE - SKY</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<style>
+body {
+  font-family: helvetica;
+}
+.nav {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 30px;
+  background: rgba(256,256,256,256);
+  border-bottom: 2px solid black;
+  z-index: 10;
+}
+.logo {
+  position: relative;
+  top: 250px;
+  width: 400px;
+  height: 200px;
+  background: url(logo.png);
+  z-index: 8;
+}
+.menu {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  width: 300px;
+}
+ul {
+  position: absolute;
+  bottom: -16px;
+  right: 20px;
+  padding: 5px;
+  width: 350px;
+  -webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+.menu li {
+  display: inline;
+  padding: 0px 10px 0px 10px;
+  border-bottom: 0px solid white;
+  transition: 0.2s;
+  font-weight: bold;
+}
+.menu li:hover {
+  border-bottom: 3px solid black;
+  transition: 0.2s;
+}
+.menu a {
+  text-decoration: none;
+  color: black;
+}
+.c1 {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background: url(https://www.scout.ch/de/anlaesse/explorer-belt/copy_of_2011-mongolei/ALDIReisen_AlaskaYukon_1.JPG);
+  z-index: 1
+}
+.white {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: rgba(256,256,256,0.25);
+  z-index: 7;
+}
+.bird {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 512px;
+  height: 400px;
+  background: url(http://freepngimages.com/wp-content/uploads/2014/05/bird_1.png);
+  z-index: 4;
+  -webkit-filter: blur(3px);
+  -moz-filter: blur(3px);
+  -o-filter: blur(3px);
+  -ms-filter: blur(3px);
+  filter: blur(2px);
+}
+.tree {
+  position: absolute;
+  left: 0px;
+  bottom: -300px;
+  width: 500px;
+  height: 447px;
+  background: url(http://drrcmoredock.com/assets/img/tree-500-dither.png);
+  z-index: 3;
+}
+.balloon {
+  position: absolute;
+  left: 100px;
+  top: 100px;
+  width: 225px;
+  height: 287px;
+  background: url(http://www.flyairborne.com/images/air54.gif);
+  z-index: 2;
+}
+.c2 {
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background: white;
+  text-align: center;
+  z-index: 6;
+}
+.c2c {
+  position: relative;
+  top: 100px;
+}
+.c2c a {
+  color: black;
+}
+.c2c a:hover {
+  color: black;
+}
+.c3 {
+  position: absolute;
+  top: 200%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background: url(http://iliketowastemytime.com/sites/default/files/night-sky-hd-wallpaper.jpg) fixed;
+  text-align: center;
+  z-index: 6;
+  color: white;
+}
+.c3c {
+  position: relative;
+  top: 150px;
+}
+.c3c a {
+  color: white;
+}
+.c3c a:hover {
+  color: white;
+}
+.c3c hr {
+height: 5px;
+color: white;
+background-color: white;
+width: 50px;
+}
+.c4 {
+  position: absolute;
+  top: 300%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background: white;
+  text-align: center;
+  z-index: 6;
+}
+.c4c {
+  position: relative;
+  top: 150px;
+}
+.c4c a {
+  color: black;
+}
+.c4c a:hover {
+  color: black;
+}
+hr {
+height: 5px;
+color: black;
+background-color: black;
+width: 50px;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+.footer {
+  background: #2D2D2D;
+  color: white;
+  position: absolute;
+  top: 400%;
+  width: 100%;
+  height: auto;
+  z-index: 6;
+}
+</style>
+</head>
+<body>
+<header>
+<div class="nav">
+<a style="font-size: 23px; padding-left: 10px; color: black; text-decoration: none; cursor: pointer;">IMPOSSIBLE - SKY</a>
+<div class="menu">
+<ul>
+<a href="#home"><li>HOME</li></a>
+<a href="#about"><li>ABOUT</li></a>
+<a href="#test"><li>SERVICES</li></a>
+<a href="#contact"><li>CONTACT</li></a>
+</ul>
+</div>
+</div>
+<div class="c1" id="home">
+<div class="bird"></div>
+<div class="tree"></div>
+<div class="balloon"></div>
+<center><div class="logo"></div></center>
+<div class="white"></div>
+</div>
+</header>
+
+<div class="c2" id="about">
+<div class="c2c">
+<br>
+<h1>ABOUT<hr></h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
+<p>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>
+<p>laboris nisi ut aliquip ex ea commodo consequat.</p>
+<br><br><br>
+<img src="https://cdn3.iconfinder.com/data/icons/seo-internet-marketing-flat-icons/250/web-code.png" style="border-radius: 100px; width: 150px; height: 150px;" data-toggle="tooltip" data-placement="top" title="Nikola Petrovic">
+<h3>
+Nikola Petrovic
+<br>
+<a style="font-size: 15px; color: grey; border-top: 1px solid grey; border-bottom: 1px solid grey;">Web Developer / Designer</a>
+<br>
+<a style="font-size: 13px;">Nikola is web developer/designer from Serbia.<br>He learned HTML, CSS, JavaScript and jQuery,<br>He's still trying to improve his skills.</a>
+</h3>
+</div>
+</div>
+<div class="c3" id="test">
+<div class="c3c">
+<br>
+<h1>SERVICES<hr></h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
+<p>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>
+<p>laboris nisi ut aliquip ex ea commodo consequat.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
+<p>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>
+<p>laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+</div>
+<div class="c4" id="contact">
+<div class="c4c">
+<br>
+<h1>CONTACT<hr></h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
+<p>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>
+<p>laboris nisi ut aliquip ex ea commodo consequat.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
+<p>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>
+<p>laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+</div>
+<div class="footer">
+<br>
+<center>
+<h3>All rights reserved.</h3>
+</center>
+</div>
+<script>
+$(window).scroll(function(){
+
+  var wScroll = $(this).scrollTop();
+
+  $('.balloon').css({
+    'transform' : 'translate(0px, '+ wScroll /-25 + '%)'
+    });
+  
+  $('.bird').css({
+    'transform' : 'translate(0px, '+ wScroll /-5 + '%)'
+    });
+  
+  $('.tree').css({
+    'transform' : 'translate(0px, '+ wScroll /-20 + '%)'
+    });
+	
+  $('.logo').css({
+    'transform' : 'translate(0px, '+ wScroll /-15 + '%)'
+    });
+});
+
+$(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1500);
+        return false;
+      }
+    }
+  });
+});
+
+$(function(){ 
+
+        var $window = $(window);
+  var scrollTime = 0.7;
+  var scrollDistance = 150;
+
+  $window.on("mousewheel DOMMouseScroll", function(event){
+
+    event.preventDefault(); 
+
+    var delta = event.originalEvent.wheelDelta/120 || -event.originalEvent.detail/3;
+    var scrollTop = $window.scrollTop();
+    var finalScroll = scrollTop - parseInt(delta*scrollDistance);
+
+    TweenMax.to($window, scrollTime, {
+      scrollTo : { y: finalScroll, autoKill:true },
+        ease: Power1.easeOut,
+        overwrite: 5              
+      });
+
+  });
+});
+
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+</body>

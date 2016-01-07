@@ -1,0 +1,33 @@
+/* MOBILE VERSION */
+@media (max-width: 500px) {
+  .nav {
+    height: 50px;
+  }
+  .menu {
+    display: none;
+  }
+  .logo {
+    display: none;
+  }
+  .logo-text {
+    display: block;
+  }
+  .description {
+    top: 200px;
+  }
+  .title {
+    display: none;
+  }
+  .description {
+    font-size: 16px;
+    top: 170px;
+  }
+  .mobile-menu {
+    display: block;
+  }
+}
+@media (max-width: 800px) {
+  .title {
+    font-size: 50px;
+  }
+}
