@@ -1,0 +1,148 @@
+<head>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+ <title>SweetAlert Plugin</title>
+ <script src="sweetalert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="sweetalert.css">
+  <script>
+ function sweet() {
+ 	if (document.getElementById("box1").value == 0 || document.getElementById("box2").value == 0) {
+ 		swal("Error", "Please fill all fields first!", "error");
+ 	}
+ 	else {
+ 		swal(document.getElementById("box1").value, document.getElementById("box2").value, document.getElementById("box3").value);
+ 	}
+ }
+ function code() {
+ 	if (document.getElementById("box1").value == 0 || document.getElementById("box2").value == 0) {
+ 		document.getElementById("codebox").innerHTML = "Please fill all fields!";
+ 	}
+ 	else if (document.getElementById("box3").value == 0) {
+ 		document.getElementById("codebox").innerHTML = "swal('" + document.getElementById("box1").value + "', '" + document.getElementById("box2").value + "');";
+ 	}
+ 	else {
+ 		document.getElementById("codebox").innerHTML = "swal('" + document.getElementById("box1").value + "', '" + document.getElementById("box2").value + "', '" + document.getElementById("box3").value + "');";
+ 	}
+ }
+ function sweet2() {
+ 	if (document.getElementById("box4").value == 0 || document.getElementById("box5").value == 0 || document.getElementById("box6").value == 0) {
+ 		swal("Error", "Please fill all fields first!", "error");
+ 	}
+ 	else {
+ 		swal({title: document.getElementById("box5").value, text: document.getElementById("box6").value, imageUrl: document.getElementById("box4").value});
+ 	}
+ }
+function code2() {
+ 	if (document.getElementById("box4").value == 0 || document.getElementById("box5").value == 0 || document.getElementById("box6").value == 0) {
+ 		document.getElementById("codebox2").innerHTML = "Please fill all fields!";
+ 	}
+ 	else {
+ 		document.getElementById("codebox2").innerHTML = "swal({title: '" + document.getElementById("box5").value + "', text: '" + document.getElementById("box6").value + "', imageUrl: '" + document.getElementById("box4").value + "'});";
+ 	}
+ }
+</script>
+<style>
+	input {
+		width: 200px;
+		border: 0px solid black;
+		border-bottom: 3px solid black;
+		color: black;
+		margin-top: 10px;
+	}
+	body {
+		font-family: helvetica;
+	}
+	button {
+		width: 200px;
+		background-color: white;
+		color: black;
+		border: 2px solid black;
+		cursor: pointer;
+	}
+	#codebox {
+		width: 200px;
+		height: 25px;
+		font-size: 15px;
+		background-color: white;
+	}
+	#codebox2 {
+		width: 200px;
+		height: 25px;
+		font-size: 15px;
+		background-color: white;
+	}
+	select {
+		width: 150px;
+		border: 0px solid black;
+		border-bottom: 2px solid black;
+		margin-top: 10px;
+		overflow: hidden;
+		background: url(http://pete.mcphedran.com/Pete/blog.nsf/images/arrowdown.gif) no-repeat right #fff;
+		    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+	}
+	.box {
+		position: relative;
+		border: 3px solid black;
+		width: 350px;
+		height: auto;
+		text-align: center;
+	}
+	.box h3 {
+		margin-top: 10px;
+		margin-bottom: 10px;
+		color: #333;
+	}
+	h1 {
+		margin-bottom: 0px;
+	}
+</style>
+<script src="jquery.nicescroll.js"></script>
+ <script tyoe="text/javascript">
+ $(document).ready(function() { 
+  $("html").niceScroll();
+});
+ </script>
+ <script src="jquery.min.js"></script>
+</head>
+<h1 style="font-size: 69px; color: #333;">SweetAlert</h1>
+
+
+<div class="box">
+<h3>Standard alert</h3>
+<input type="text" id="box1" placeholder="Title" /><br>
+<input type="text" id="box2" placeholder="Description" /><br>
+Type: <select id="box3">
+	<option value="success">success</option>
+	<option value="error">error</option>
+	<option value="warning">warning</option>
+	<option value="">none</option>
+</select><br><br>
+<button onclick="sweet()">ALERT</button>
+<br>
+<br>
+<button onclick="code()">GET CODE</button><br><br>
+<a id="codebox">
+	
+</a>
+<br>
+<br>
+</div>
+<br>
+<div class="box">
+<h3>Custom image alert</h3>
+<input type="text" id="box4" placeholder="Image url" /><br>
+<input type="text" id="box5" placeholder="Title" /><br>
+<input type="text" id="box6" placeholder="Description" /><br>
+<br>
+<button onclick="sweet2()">ALERT</button>
+<br>
+<br>
+<button onclick="code2()">GET CODE</button><br><br>
+<a id="codebox2">
+	
+</a>
+<br>
+<br>
+</div>
