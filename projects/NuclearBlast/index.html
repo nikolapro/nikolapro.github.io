@@ -1,0 +1,252 @@
+<header>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+  <style>
+  html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: helvetica;
+}
+
+.page {
+  display: none;
+  position: relative;
+  top: -70px;
+  left: 20px;
+  margin-right: 50px;
+  height: auto;
+  font-size: 20px;
+}
+
+.page hr {
+  height: 1px;
+  background-color: black;
+  color: black;
+}
+
+.kolona {
+  text-align: center;
+}
+
+header {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 150px;
+  line-height: 150px;
+  text-align: center;
+  /* background-color: rgba(30,40,10,0.4); */
+  background-size: cover;
+  background-image: url("http://wallpaperskyline.com/wp-content/uploads/2015/02/black-background-texture-wallpaper.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+header {
+  position: fixed;
+  font-size: 80px;
+  font-weight: bold;
+  color: white;
+  z-index: 5;
+}
+
+.row {
+  margin: 0;
+}
+
+.menu {
+  position: fixed;
+  top: 150px;
+  left: 0px;
+  width: 100%;
+  background-color: black;
+  color: white;
+  z-index: 1;
+  border-top: 2px solid white;
+}
+
+.menu span {
+  display: inline;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.1s;
+  border-bottom: 0px solid black;
+  transition: all 0.3s;
+  -webkit-tansition: all 0.3s; //safari
+}
+
+.menu span:hover {
+  border-bottom: 3px solid white;
+}
+
+content {
+  position: relative;
+  top: 320px;;
+height:auto;
+  font-size: 20px;
+}
+
+content h1 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.right1 {
+  position: absolute;
+  top: 230px;
+  right: 45px;
+  width: 200px;
+  height: 200px;
+  border: 2px solid black;
+}
+
+.page.active {
+  display: block;
+}
+
+.title {
+  display: none;
+}
+
+span.active {
+  border-bottom: 3px solid white!important;
+}
+
+.title.visible {
+  display: block;
+}
+#owl-demo {
+  position: relative;
+  left: 0px;
+  border: 2px solid black;
+  background-color: black;
+}
+#owl-demo .item img {
+  display: block;
+  width: 100%;
+  height: 400px;
+}
+footer {
+  position: relative;
+  width: 100%;
+  height: 25px;
+  background-color: black;
+  color: white;
+  line-height: 25px;
+  text-align: center;
+}
+  </style>
+  <script>
+  $(window).resize(function(){
+rHandle();
+});
+$(document).ready(function() {
+rHandle();
+$('.submenu#poc').addClass('active');
+$('.page#poc').addClass('active');
+  $('.title').addClass('rollIn').addClass('visible');
+  $('.submenu').click(function() {
+    //raspoznajes ih na osnovu id-a
+    $('.submenu').removeClass('animated').removeClass('rollIn');
+    $(this).addClass('animated').addClass('rollIn');
+    $('.submenu').removeClass('active');
+    $(this).addClass('active');
+    var id = $(this).attr('id');
+    $('.page').removeClass('active');
+    $('.page#' + id).addClass('active')
+      //da vidimo
+      //da probamo
+  });
+
+  $("#owl-demo").owlCarousel({
+
+    autoPlay : 3500,
+    navigation: false, // Show next and prev buttons
+    slideSpeed: 300,
+    paginationSpeed: 400,
+    singleItem: true
+
+    // "singleItem:true" is a shortcut for:
+    // items : 1, 
+    // itemsDesktop : false,
+    // itemsDesktopSmall : false,
+    // itemsTablet: false,
+    // itemsMobile : false
+
+  });
+});
+function rHandle(){
+var height= $('header').height() + $('.menu').height() + 100
+$('content').css("top",height + "px")
+
+}
+//imas chast da probas prvi
+/*
+samo malo
+
+*/
+
+  </script>
+  <div class="title animated">
+    NASLOV
+  </div>
+</header>
+<div class="menu animated fadeInLeft">
+  <div class="row">
+    <div class="col-xs-12 col-sm-4 kolona">
+      <span id="poc" class="submenu">Pocetna</span>
+    </div>
+    <div class="col-xs-12 col-sm-4 kolona">
+      <span id="onama" class="submenu">O nama</span>
+    </div>
+    <div class="col-xs-12 col-sm-4 kolona">
+      <span id="ks" class="submenu">Korisne stvari</span>
+    </div>
+  </div>
+
+</div>
+<content>
+
+
+ 
+  <div id="poc" class="page bounceInLeft animated">
+    <h1>Pocetna</h1>
+    <hr> This is a simple description
+     <div id="owl-demo" class="owl-carousel owl-theme">
+
+    <div class="item"><img src="http://owlgraphic.com/owlcarousel/demos/assets/fullimage1.jpg" alt="The Last of us"></div>
+    <div class="item"><img src="http://owlgraphic.com/owlcarousel/demos/assets/fullimage2.jpg" alt="GTA V"></div>
+    <div class="item"><img src="http://owlgraphic.com/owlcarousel/demos/assets/fullimage3.jpg" alt="Mirror Edge"></div>
+
+  </div>
+  </div>
+  <div id="onama" class="page bounceInLeft animated">
+    <h1>O nama</h1>
+    <hr>
+    <b>Nikola</b>
+    <br> Ja sam Nikola Petrovic, web developer/designer, pokusavam da unapredim svoje vestine svaki dan. :D
+    <hr>
+    <b>Marko</b>
+    <br> Ja sam Marko Mackic, frontend,backend developer , koji trenutno nema pametnija posla nego da se zajebava :D
+  </div>
+  <div id="ks" class="page bounceInLeft animated">
+    <h1>Korisne stvari</h1>
+    <hr> nikola, marko..
+  </div>
+  <footer>
+Copyright &copy; Marko, Nikola
+</footer>
+</content>
