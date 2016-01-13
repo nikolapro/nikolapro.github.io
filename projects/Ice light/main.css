@@ -91,7 +91,7 @@ html, body {
 #site-menu-background-overlay {
     display: block;
     width: 100vw;
-    height: 100vw;
+    height: 100vh;
     position: absolute;
     top: 0;
     left: 0;
@@ -100,7 +100,7 @@ html, body {
     z-index: 2;
 }
 
-#site-menu-background-container > div {
+.bg-container {
     width: 100vw;
     height: 100vh;
     margin: 0;
@@ -108,7 +108,8 @@ html, body {
     position: absolute;
     top: 0;
     left: 0;
-    background-size: cover;
+    overflow: hidden;
+
 }
 
 #site-menu-text-container * {

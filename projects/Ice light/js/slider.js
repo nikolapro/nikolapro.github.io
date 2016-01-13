@@ -1,11 +1,11 @@
 $(function () {
     function changeImg() {
-        bottom.css('background-image', 'url("' + imagesArray[index] + '")');
+        bottom.attr('src', imagesArray[index]);
         setTimeout(function () {
             top.hide();
             index++;
             if (index >= imagesArray.length) index = 0;
-            top.css('background-image', 'url("' + imagesArray[index] + '")');
+            top.attr('src', imagesArray[index]);
             top.fadeIn(400);
             bottom.fadeOut(800);
         }, 2000);
@@ -21,6 +21,10 @@ $(function () {
         index = 1,
         top = $('#site-menu-background-container-top'),
         bottom = $('#site-menu-background-container-bottom');
-    bottom.css('background-image', 'url("' + imagesArray[index] + '")');
+    bottom.attr('src', imagesArray[index]);
+    bottom.attr('width', $(window).width());
+    top.attr('width', $(window).width());
+    top.attr('height', $(window).height());
+    bottom.attr('height', $(window).height());
     setInterval(changeImg, 5000);
 });
