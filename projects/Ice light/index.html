@@ -1,76 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Ice light</title>
-	<link rel="stylesheet" href="main.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.transitions.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-zoom=1.0, minimum-zoom=1.0">
+    <title>Ice Light</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/scrolljacker.js"></script>
+    <script>
+        $(function () {
+            var handle = function () {
+                if (screen.width > 600 && window.innerWidth > 600) return;
+                $('#site-menu-nav').toggle();
+                $('#site-menu-nav-wrap-mobile').toggleClass('active');
+            };
+            $.each(['touch', 'click'], function (i, e) {
+                $('#site-menu-nav-mobile-button').on(e, handle);
+                $('#site-menu-nav-wrap-mobile').on(e, function () {
+                    $(this).toggleClass('active');
+                    $('#site-menu-nav').toggle();
+                });
+                $('#site-menu-down-button').on(e, function () {
+                    $('html, body').animate({
+                        scrollTop: $(window).height()
+                    }, 400);
+                });
+            });
+        });
+    </script>
 </head>
 <body>
-	<div class="menu">
-		<div class="title">ICE LIGHT</div>
-		<ul id="menu">
-			<li>Hello</li>
-			<li>Option2</li>
-			<li>yup</li>
-		</ul>
-	</div>
-	<div id="owl-demo" class="owl-carousel owl-theme">
-     
-      <div class="item"><img src="images/slides/slide1.jpg"></div>
-      <div class="item"><img src="images/slides/slide2.jpg"></div>
-      <div class="item"><img src="images/slides/slide3.jpg"></div>
-      <div class="item"><img src="images/slides/slide4.jpg"></div>
-      <div class="item"><img src="images/slides/slide5.jpg"></div>
-     
+<div id="site-menu">
+    <div id="site-menu-text-container">
+        <div id="site-menu-title">ICE LIGHT</div>
+        <div id="site-menu-nav-container">
+            <div id="site-menu-nav-mobile">
+                <div id="site-menu-nav-mobile-button">
+                    <div class="arrow"></div>
+                </div>
+            </div>
+            <div id="site-menu-nav-wrap-mobile">
+                <ul id="site-menu-nav">
+                    <li><a href="#hello">Hello</a></li>
+                    <li>Option2</li>
+                    <li>Option3</li>
+                </ul>
+            </div>
+        </div>
     </div>
-    <div class="topoverlay">
-    	<div class="toptext">This is the ice light.</div>
+    <div id="site-menu-title-container">
+        <h1>This Is The Ice Light</h1>
     </div>
-    
-    <div class="lt"><img src="images/ltimg.jpg"></div>
-    <div class="lttxt">
-    	<h2>Hello there!</h2>
-    	<p>Hey there, welcome to ice light. this is a powerful template created by Nikola Petrovic, Nikola is web developer/designer and he is trying to make his skills better every new day!</p>
+    <div id="site-menu-down-button"></div>
+    <div id="site-menu-background-container">
+        <div id="site-menu-background-overlay"></div>
+        <div id="site-menu-background-container-top">
+        </div>
+        <div id="site-menu-background-container-bottom">
+        </div>
     </div>
-    <div class="content">
-    	<hr>
-    	<h2>This is title.</h2>
-    	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      <hr>
-      <h2>This is title 2.</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      <div class="footer">
-        Copyright &copy; Ice light
-      </div>
-    </div>
-	<script>
+</div>
+<div id="content">
+    <div class="content-section" id="title1">
+        <h2>This is title.</h2>
 
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum.</p>
+    </div>
+    <div class="content-section" id="title2">
+        <h2>This is title 2.</h2>
 
-    $(document).ready(function() {
-     
-      $("#owl-demo").owlCarousel({
-     
-          navigation : false, // Show next and prev buttons
-          slideSpeed : 300,
-          paginationSpeed : 400,
-          singleItem: true,
-          autoPlay: true,
-          transitionStyle: "fade"
-     
-          // "singleItem:true" is a shortcut for:
-          // items : 1, 
-          // itemsDesktop : false,
-          // itemsDesktopSmall : false,
-          // itemsTablet: false,
-          // itemsMobile : false
-     
-      });
-     
-    });
-    </script>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum.</p>
+    </div>
+    <div class="content-section" id="title3">
+        <h2>This is title 3.</h2>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum.</p>
+    </div>
+</div>
+<div id="hidden"></div>
 </body>
 </html>
