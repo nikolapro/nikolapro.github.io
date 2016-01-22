@@ -153,7 +153,7 @@ var onload = function () {
             $('<a class="nitem visit-cms">').attr('href', 'http://yourphotomake.info/cms/admin735').attr('target', '_blank').text('Visit CMS')
         ).append($('<br>')).append(
             $('<a class="nitem">').click(function () {
-                send('Read rules at http://yourphotomake.info/rules.');
+                send('[You can read rules here.](http://yourphotomake.info/rules/)');
             }).text('Rules Message')
         ).append($('<br>')).append(
             $('<a class="nitem">').click(function () {
