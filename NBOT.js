@@ -79,7 +79,7 @@ function setupWS() {
                             else if (eventJson['event_type'] == 3) {
                                 var username = eventJson['user_name'];
                                 send('Hello, @' + toPingFormat(username) + ' Welcome to PHP, MYSQL, HTML, CSS, JS, JQ Chat If You have not read the rules, please do so.', function () {
-                                    send('[You can read rules here.](http://yourphotomake.info/rules/)');
+                                    send('[You can read rules here.](http://yourphotomake.info/rules/) `Thank you!`');
                                 });
                             }
                         }
