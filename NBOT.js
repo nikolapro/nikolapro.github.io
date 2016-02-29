@@ -65,6 +65,7 @@ function setupWS() {
                                     var commandParts = message.split(/^\+(\w+) ?(.+)?$/).filter(function (e) {
                                         return !!e;
                                     });
+                                    var command = commandParts[0];
                                     if (!botCommand[command]) {
                                         var keys = Object.keys(botCommand), matches = Array(2), cmd = command, ix = 0, hh = 0;
                                         for (var i = 0; i < keys.length; i++) {
