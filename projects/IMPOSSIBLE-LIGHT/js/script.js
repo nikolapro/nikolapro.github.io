@@ -3,7 +3,7 @@ $(window).scroll(function () {
     var wScroll = $(this).scrollTop();
 
     $('.header-background').css({
-        'transform': 'translate(0px, ' + wScroll / -70 + '%)'
+        'transform': 'translate(0px, ' + wScroll / 70 + '%)'
     });
 
     $('.logo').css({
