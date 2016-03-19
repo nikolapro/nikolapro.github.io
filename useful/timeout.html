@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Timeout</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<style>
+	body {
+		background-color: black;
+		text-align: center;
+	}
+	button {
+		padding: 0;
+		margin: 0 auto;
+		width: 400px;
+		height: 50px;
+		background-color: white;
+		color: black;
+		font-size: 30px;
+		border: 0px solid white;
+		font-family: helvetica;
+		cursor: pointer;
+	}
+	span {
+		font-size: 25px;
+		color: white;
+		font-family: helvetica;
+	}
+	div {
+		font-size: 25px;
+		color: white;
+		font-family: helvetica;
+	}
+	#timer {
+		position: absolute;
+		top: 150px;
+		left: 100px;
+		right: 100px;
+		text-align: center;
+		font-size: 200px;
+	}
+	</style>
+</head>
+<body>
+<div id="timet">End time: <span id="time"></span> seconds</div>
+<span id="timer"></span>
+<br>
+<button id="ok" style="display: block;">Stop</button>
+<span id="cnc" style="display: none;"></span>
+<button id="ret" style="display: none;">Retry</button>
+	<script>
+	    var count = 0;
+	    var end = prompt("End time? (in seconds)", "10");
+	    if (end == null) {
+	      $('#timet').fadeOut('fast');
+	      $('#timer').fadeOut('fast');
+	      $('#ok').fadeOut();
+	      $('#cnc').html("You can't cancel this game.<br>");
+	      $('#cnc').fadeIn('fast');
+	      $('#ret').fadeIn('fast');
+	    }
+	    else if (end.match(/[^0-9.]/ig)) {
+	      $('#timet').fadeOut();
+	      $('#timer').fadeOut('fast');
+	      $('#ok').fadeOut('fast');
+	      $('#cnc').html("Your end time doesn't contains only numbers.<br>");
+	      $('#cnc').fadeIn('fast');
+	      $('#ret').fadeIn('fast');
+	    }
+	    var endd = parseInt(end);
+	    var enddd = endd * 100;
+	    var endddd = endd * 1000 / 2 / 1.5;
+	    $('#time').html(endd);
+	    var dis = setTimeout(function(){
+	    	$('#timer').fadeOut(1500);
+	    },endddd)
+	    var counter = setInterval(timer, 10); //10 will  run it every 100th of a second
+	    function timer()
+	    {
+	         count++;
+	         document.getElementById("timer").innerHTML=count /100; 
+	     }
+	$('#ok').click(function(){
+		clearInterval(counter);
+	  clearTimeout(dis);
+	  if (count > enddd) {
+	  	alert('Time: ' + $('#timer').text() + '\n More than ' + endd + ' seconds.');
+	  }
+	  else if (count < enddd) {
+	  	alert('Time: ' + $('#timer').text() + '\n Less than ' + endd + ' seconds.');
+	  }
+	  $('#timer').fadeIn('fast');
+	  $('#timer').css({'font-size': '30px'})
+	  $('#timer').html('Your time: ' + $('#timer').text() + ' seconds');
+	  $('#ok').fadeOut('fast');
+	  $('#ret').fadeIn('fast');
+	  return;
+	})
+	$('#ret').click(function(){
+		location.reload();
+	})
+	</script>
+</body>
+</html>
