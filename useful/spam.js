@@ -1,6 +1,5 @@
 function spam(message,num,delay) {
   var number = 0;
-  var delay = 6000;
   var sp = setInterval(function(){
     $('#input').val(message);
     $('#sayit-button').click();
