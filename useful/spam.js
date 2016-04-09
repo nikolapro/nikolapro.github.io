@@ -1,4 +1,5 @@
 function spam(message,num,delay) {
+  var number = 0;
   var delay = 6000;
   var sp = setInterval(function(){
     $('#input').val(message);
@@ -6,7 +7,7 @@ function spam(message,num,delay) {
     setInterval(function(){
       $('i:first').find('a:first').click();
     },0)
-    if (++num === num) {
+    if (++number === num) {
       window.clearInterval(sp);
     }
   },delay);
