@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title><3</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<style>
+	@import url(https://fonts.googleapis.com/css?family=Roboto:300,700);
+	.cat {
+	  position: absolute;
+	  top: 10%;
+	  left: -250px;
+	  background-image: url(https://s-media-cache-ak0.pinimg.com/originals/ee/dd/e5/eedde5a7ab6c65899c25028ee9224e13.gif);
+	  background-size: cover;
+	  width: 100px;
+	  height: 200px;
+	  animation: move-ass 10s infinite;
+	}
+	@keyframes move-ass {
+	  0% {left: -250px; transform: scaleX(1)}
+	   48% {left: 50%; transform: scaleX(1)}
+	  50% {left: 50%; transform: scaleX(-1)}
+	  100% {left: -250px; transform: scaleX(-1)}
+	}
+	.tit {
+		position: relative;
+		top: 50%;
+		transform: translate(0, -50%);
+		width: 100%;
+		font-size: 70px;
+		text-align: center;
+		font-family: 'Roboto', sans-serif;
+	}
+	.tit b {
+		font-weight: 700;
+	}
+	.tit2 {
+		position: relative;
+		top: 250px;
+		width: 100%;
+		font-size: 70px;
+		text-align: center;
+		font-family: 'Roboto', sans-serif;
+	}
+	.tit2 b {
+		font-weight: 700;
+	}
+	.b1 {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: white;
+		z-index: 10;
+		border-bottom: 2px solid black;
+		font-family: 'Roboto', sans-serif;
+	}
+	.b2 {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		min-height: 100%;
+		background-color: white;
+		z-index: 9;
+		border-bottom: 2px solid black;
+		font-family: 'Roboto', sans-serif;
+	}
+	.b2 .desc {
+		position: relative;
+		font-size: 28px;
+		top: 30px;
+		width: 90%;
+		margin: 0 auto;
+	}
+	.b3 {
+		position: absolute;
+		top: 200%;
+		left: 0;
+		width: 100%;
+		min-height: 100%;
+		background-color: white;
+		z-index: 8;
+		border-bottom: 2px solid black;
+		font-family: 'Roboto', sans-serif;
+	}
+	.b3 .desc {
+		position: relative;
+		font-size: 40px;
+		top: 30px;
+		width: 90%;
+		margin: 0 auto;
+	}
+	.b3 .cake {
+		position: relative;
+		top: 100px;
+		margin: 0 auto;
+		width: 250px;
+		height: 250px;
+		background-image: url(http://www.misskatecuttables.com/uploads/shopping_cart/7692/large_sliceofcake.png);
+		background-size: cover;
+	}
+	</style>
+</head>
+<body>
+	<div class="b1">
+		<div class="cat"></div>
+		<div class="tit">Hello <b>Patrik</b>,<br>Do you know <b>what day it is</b>?</div>
+	</div>
+	<div class="b2">
+		<div class="tit2">
+			It's your <b>birthday</b>!
+			<div class="desc">Hello Patrik, do you remember time we spent together? (music, coding, chatting...)<br>We actually spent much time together, and I know that you are the real friend,<br><b>and now I just want to tell you one thing...</b></div>
+		</div>
+	</div>
+	<div class="b3">
+		<div class="tit2">
+			<b>Happy birthday!</b>
+			<div class="desc">I wish you all the luck in the world! :D</div>
+			<div class="cake"></div>
+		</div>
+	</div>
+</body>
+</html>
