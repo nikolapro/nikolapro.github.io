@@ -1,71 +1,54 @@
 body {
-	font-family: helvetica;
+  padding: 0;
+  margin: 0;
 }
-header {
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	width: 100%;
-	height: 180px;
-	border-bottom: 5px solid #ccc;
+.heading {
+  position: absolute;
+  margin-left: 0;
+  margin-top: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://wallpapersite.com/images/wallpapers/stars-2560x1440-purple-cosmos-hd-7172.jpg');
+  background-size: 100% 100%;
 }
-header .title {
-	position: absolute;
-	top: 10px;
-	left: 10px;
-	font-size: 70px;
-	color: #333;
+.tmenu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: white;
+  color: black;
 }
-.menu {
-	position: absolute;
-	bottom: 0px;
-	left: 10px;
+.tmenu .title {
+  position: absolute;
+  left: 10px;
+  top: 5px;
+  font-size: 35px;
+  font-family: helvetica;
+  color: #650e7c;
 }
-.menu ul {
-	border-bottom: 1px solid #ccc;
-	padding-bottom: 5px;
+.tmenu .items {
+  position: absolute;
+  top: 10px;
+  right: 5px;
+  width: auto;
 }
-.menu ul li {
-	font-size: 20px;
-	margin-right: 25px;
-	display: inline;
-	color: #333;
-	cursor: pointer;
-	text-decoration: none;
-	padding-bottom: 5px;
+.tmenu .items #item {
+  position: relative;
+  text-align: center;
+  font-size: 25px;
+  font-family: helvetica;
+  margin-left: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+  border-top: 8px solid white;
+  border-bottom: 8px solid white;
 }
-.menu ul a {
-	text-decoration: none;
-}
-.menu ul li:hover {
-	color: red;
-	border-bottom: 2px solid red;
-}
-.container {
-	position: absolute;
-	top: 220px;
-	left: 35px;
-	right: 35px;
-}
-.container #title {
-	font-size: 30px;
-	font-weight: bold;
-	color: #333;
-}
-.container #description {
-	font-size: 20px;
-	color: #333;
-}
-.menu #active {
-	color: red;
-	border-bottom: 2px solid red;
-}
-@media (max-width: 600px) {
-	header .title {
-		font-size: 50px;
-	}
-	.menu ul li {
-		margin-right: 20px;
-		font-size: 15px;
-	}
+.tmenu .items #item:hover {
+  border-top: 4px solid #650e7c;
+  border-bottom: 4px solid #650e7c;
 }
