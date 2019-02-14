@@ -46,6 +46,7 @@ body {
   left: 0;
   right: 0;
   background-color: white;
+  box-shadow: -7px 7px rgba(0, 0, 0, 0.5);
   z-index: 0;
 }
 .page .container .title {
@@ -53,7 +54,6 @@ body {
   position: absolute;
   text-align: center;
   font-size: 70px;
-  color: white;
   font-family: helvetica;
   top: -85px;
   z-index: 1;
@@ -134,4 +134,13 @@ body {
   font-size: 50px;
   font-family: helvetica;
   transition: 0s;
+}
+@media only screen and (min-width: 699px) {
+  .page .container .title {
+    color: white;
+  }
+  body {
+    background-image: ;
+    background-color: #a30000;
+  }
 }
