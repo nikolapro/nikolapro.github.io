@@ -46,7 +46,6 @@ body {
   left: 0;
   right: 0;
   background-color: white;
-  box-shadow: -7px 7px rgba(0, 0, 0, 0.5);
   z-index: 0;
 }
 .page .container .title {
