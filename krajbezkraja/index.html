@@ -1,6 +1,7 @@
 <head>
   <title>Kraj bez kraja</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="shortcut icon" type="image/x-icon" href="heart.png" />
+  <link rel="stylesheet" href="style.css">
   <script type="text/javascript">
   <!--
   if (screen.width <= 699) {
@@ -8,10 +9,13 @@
   }
   //-->
    </script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
+  <div id="fadeout">
   <div class="header">
-  	
+  	<a class="text">Kraj bez kraja.</a>
+  <img class="scroll" src="scroll.gif">
   </div>
   <div class="page">
     <div class="container">
@@ -125,5 +129,18 @@
     	</div>
     </div>
   </div>
-  <div class="button">Samo klikni ovde.</div>
+  <div class="button" onclick="fadein()">Za kraj klikni ovde.</div>
+  </div>
+  <div class="end">
+  	Srećan dan zaljubljenih ljubavi. Volim te.
+  	<div class="heart"></div>
+  </div>
+   <script type="text/javascript">
+  <!--
+	function fadein() {
+ 		$('.end').css('top', '0');
+ 		$('#fadeout').fadeOut("slow");
+	}
+  //-->
+  </script>
 </body>
